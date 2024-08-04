@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <div>
-      <div className="bg-gray-800">
+      <div className="bg-black">
         <div className="flex justify-between items-center max-w-6xl mx-auto p-4">
           <div className="flex items-center">
             <button onClick={toggleSidebar} className="text-white mr-10">
@@ -57,7 +57,7 @@ export default function Header() {
         </div>
       )}
 
-      <div className="bg-gray-800">&nbsp;</div>
+      <div className="bg-black">&nbsp;</div>
     </div>
   );
 }

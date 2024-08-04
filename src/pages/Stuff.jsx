@@ -5,60 +5,136 @@ export default function Stuff() {
   const pdfRef = useRef();
 
   return (
-    <div className="bg-yellow-200 min-h-screen w-full">
+    <div className="bg-black min-h-screen w-full">
       <div className="container mx-auto p-6">
-        <h1 className="text-3xl font-bold text-center mb-8">
-          The History of Trigonometry
+        <h1 className="text-3xl text-white font-bold text-center mb-8">
+          Trigonometry: The Story of Triangles and Tunes
         </h1>
         <div
           ref={pdfRef}
           id="pdfContent"
-          className="p-6 rounded-lg shadow-xl bg-transparent"
+          className="p-6 rounded-lg shadow-xl shadow-stone-100 bg-transparent"
         >
-          <p className="text-lg mb-4">
-            Trigonometry, the branch of mathematics that studies relationships
-            involving lengths and angles of triangles, has a rich and
-            fascinating history that dates back to ancient civilizations.
+          <p className="text-lg mb-4 text-green-400 font-semibold">
+            Imagine a time, long before calculators and fancy math apps—ancient
+            civilizations were scratching their heads over triangles. Let’s
+            rewind to around 300 BCE, where the adventure begins!
           </p>
-          <p className="text-lg mb-4">
-            The origins of trigonometry can be traced to ancient Egypt and
-            Babylon around 1900 BCE, where early mathematicians used geometric
-            methods to solve practical problems related to astronomy and land
-            surveying.
+          <h1 className="text-2xl text-white font-bold mb-8">
+            1. The Ancient Greeks: The Birth of Trigonometry
+          </h1>
+          <p className="text-lg mb-4 text-white">
+            Picture yourself in ancient Greece. Mathematicians like Hipparchus
+            are getting all excited about triangles. They’re not just any
+            triangles, though—they’re right triangles. Hipparchus is the OG of
+            trigonometry. He’s like, “Hey, let’s measure angles and sides of
+            these triangles and see what patterns we find!” And just like that,
+            he starts creating tables of chords (the ancient version of sine and
+            cosine) to help sailors navigate the vast seas.
           </p>
-          <p className="text-lg mb-4">
-            However, the development of trigonometry as a distinct branch of
-            mathematics is often attributed to the Greeks. The Greek
-            mathematician Hipparchus, around 150 BCE, is considered the "father
-            of trigonometry." He compiled the first known trigonometric table,
-            which was used to solve astronomical problems.
+          <div className="fade-in-section flex items-center justify-center">
+            <img
+              src="https://kaiserscience.wordpress.com/wp-content/uploads/2021/02/hipparchus-greek-astronomer-trigonometry-ii.jpg"
+              alt="Hipparchus"
+              className="max-w-md w-full rounded-lg shadow-lg"
+              style={{ maxWidth: "40%", height: "auto" }}
+            />
+          </div>
+          <h1 className="text-2xl text-white font-bold mb-8">
+            2. The Hindu and Islamic Golden Age: Trigonometry Gets a Glow-Up
+          </h1>
+          <p className="text-lg mb-4 text-white">
+            Fast forward a bit to the medieval period. In India and the Islamic
+            world, trigonometry is getting a serious upgrade. Indian
+            mathematicians like Aryabhata and Bhaskara II are busy refining the
+            trigonometric functions and introducing sine and cosine. Meanwhile,
+            in the Islamic world, scholars like Al-Khwarizmi and Al-Battani are
+            adding their own flair to the mix, making trigonometry even more
+            precise. It’s like trigonometry is on a world tour, picking up cool
+            new tricks!
           </p>
-          <p className="text-lg mb-4">
-            The work of the Greeks was later expanded upon by Indian
-            mathematicians such as Aryabhata and Bhaskara, who made significant
-            contributions to trigonometric functions and identities. The concept
-            of sine, cosine, and tangent functions were introduced during this
-            period.
+          <h1 className="text-2xl text-white font-bold mb-8">
+            3. The Renaissance: Trigonometry’s Glamour Shot
+          </h1>
+          <p className="text-lg mb-4 text-white">
+            As the Renaissance dawns, trigonometry is getting its glamour shot.
+            European mathematicians like Johannes Kepler and Tycho Brahe are
+            using it to make astronomical observations. Kepler, in particular,
+            is discovering the laws of planetary motion, and trigonometry is his
+            secret weapon. It’s like trigonometry is the VIP guest at the
+            coolest scientific parties!
           </p>
-          <p className="text-lg mb-4">
-            In the Islamic Golden Age (8th to 14th centuries), scholars such as
-            Al-Khwarizmi and Al-Battani further developed trigonometry,
-            incorporating it into their astronomical studies. They introduced
-            the use of trigonometric functions in solving spherical triangles,
-            which was crucial for navigation and astronomy.
+          <div className="fade-in-section flex items-center justify-center">
+            <img
+              src="https://imageio.forbes.com/blogs-images/startswithabang/files/2018/08/motion_through_universe.png?height=425&width=711&fit=bounds"
+              alt="Astronomical Observations"
+              className="max-w-md w-full rounded-lg shadow-lg"
+              style={{ maxWidth: "40%", height: "auto" }}
+            />
+          </div>
+          <h1 className="text-2xl text-white font-bold mb-8">
+            4. The Modern Era: Trigonometry Goes Mainstream
+          </h1>
+          <p className="text-lg mb-4 text-white">
+            In the 18th and 19th centuries, trigonometry gets a modern makeover.
+            People like Leonhard Euler are diving deep into its applications,
+            turning it into a full-blown mathematical superstar. Whether it’s
+            calculus, physics, or engineering, trigonometry is everywhere. It’s
+            like trigonometry’s finally made it big in Hollywood!
           </p>
-          <p className="text-lg mb-4">
-            The Renaissance period saw the revival of trigonometry in Europe,
-            with mathematicians like Johannes Kepler and Isaac Newton applying
-            trigonometric principles to their work in astronomy and calculus.
+          <h1 className="text-2xl text-white font-bold mb-8">
+            5. Today: Trigonometry in Everyday Life
+          </h1>
+          <p className="text-lg mb-4 text-white">
+            Now, trigonometry is like the best-kept secret of the universe. It’s
+            behind everything from GPS systems to video games, helping us
+            understand everything from waves to building design. It’s the unsung
+            hero of countless tech marvels.
           </p>
-          <p className="text-lg mb-4">
-            Today, trigonometry is a fundamental part of mathematics, with
-            applications spanning from engineering and physics to computer
-            graphics and signal processing. Its development over the centuries
-            reflects the evolving nature of mathematics and its application to
-            understanding the world around us.
+          <br />
+
+          <p className="text-lg mb-4 text-teal-400">
+            So next time you see a triangle, remember: it’s not just a
+            shape—it’s got a whole epic history behind it!
           </p>
+
+          <h1 className="text-2xl text-white font-bold mb-4">
+            Fun Facts About Trigonometry
+          </h1>
+          <ul className="text-lg text-white list-disc list-inside zigzag-list">
+            <li className="mb-2">
+              The word "trigonometry" comes from the Greek words "trigonon"
+              (triangle) and "metron" (measure).
+            </li>
+            <li className="mb-2">
+              Hipparchus is known as the "Father of Trigonometry" and was one of
+              the first to compile a trigonometric table.
+            </li>
+            <li className="mb-2">
+              In ancient times, trigonometry was used mainly for astronomy and
+              navigation.
+            </li>
+            <li className="mb-2">
+              The sine function, crucial to trigonometry, was known to Indian
+              mathematicians as "jya" or "jiva" around 500 AD.
+            </li>
+            <li className="mb-2">
+              Leonhard Euler, a famous mathematician, made significant
+              contributions to the development of trigonometric functions.
+            </li>
+            <li className="mb-2">
+              Trigonometry helps in creating computer graphics, especially for
+              3D modeling and animations in video games and movies.
+            </li>
+            <li className="mb-2">
+              The concept of measuring angles and calculating distances is vital
+              for GPS technology and satellite communications.
+            </li>
+            <li className="mb-2">
+              Trigonometry plays a key role in engineering, physics,
+              architecture, and even music theory!
+            </li>
+          </ul>
         </div>
       </div>
       <div className="mt-4 flex justify-center p-2 space-x-4">
@@ -71,6 +147,14 @@ export default function Stuff() {
           Download PDF
         </button>
       </div>
+      <style jsx>{`
+        .zigzag-list li:nth-child(even) {
+          margin-left: 20px; /* Adjust the value as needed for the zigzag effect */
+        }
+        .zigzag-list li:nth-child(odd) {
+          margin-left: 0px; /* Adjust the value as needed for the zigzag effect */
+        }
+      `}</style>
     </div>
   );
 }
