@@ -31,7 +31,6 @@ export default function TrigonometricCalculator() {
 
   return (
     <div className=" p-6 rounded-lg shadow-lg text-white">
-      <h2 className="text-2xl font-semibold mb-4">Trigonometric Calculator</h2>
       <div className="mb-4">
         <label htmlFor="angle-input" className="block text-lg font-medium mb-2">
           Enter Angle (degrees):
@@ -41,12 +40,15 @@ export default function TrigonometricCalculator() {
           type="number"
           value={angle}
           onChange={handleAngleChange}
-          className="p-2 border border-gray-300 rounded w-full text-black"
+          className="p-2 border border-gray-300 rounded w-full text-black bg-sky-100 font-semibold"
         />
       </div>
       <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {Object.entries(results).map(([key, value]) => (
-          <div key={key} className="bg-gray-700 p-4 rounded-lg">
+          <div
+            key={key}
+            className="bg-transparent border border-gray-600 shadow-md shadow-gray-400 p-4 rounded-lg"
+          >
             <h3 className="text-xl font-medium">{key.toUpperCase()}</h3>
             <p className="text-lg">{value}</p>
           </div>

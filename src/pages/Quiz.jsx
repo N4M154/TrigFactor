@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { FaRegSadCry } from "react-icons/fa";
+import { FaRegSmileWink } from "react-icons/fa";
 
 export default function Quiz() {
   const [selectedOptions, setSelectedOptions] = useState({});
@@ -367,7 +369,7 @@ export default function Quiz() {
           <div className="h-full">
             {questionSets[currentSet - 1].map((q, index) => (
               <div key={q.id} className="mb-4">
-                <div className="bg-gradient-to-b from-gray-400 to-gray-300 shadow-md shadow-white rounded-xl p-4">
+                <div className="bg-gradient-to-b from-gray-400 to-gray-300 shadow-lg shadow-sky-200 rounded-xl p-4">
                   <p className="mb-2 font-semibold ">{`${index + 1}. ${
                     q.question
                   }`}</p>
@@ -403,6 +405,11 @@ export default function Quiz() {
             {showFeedback && (
               <div className="mt-4">
                 <p className="text-green-500 text-2xl">Score: {score}/5</p>
+                {(score === 0 || score === 1 || score === 2) && (
+                  <div className="flex items-center mt-2 text-red-500">
+                    <FaRegSadCry className="mr-2" /> Better luck next time!
+                  </div>
+                )}
               </div>
             )}
           </div>
@@ -412,33 +419,45 @@ export default function Quiz() {
         <div className="mt-4 w-full h-full overflow-y-auto">
           <h3 className="text-2xl font-bold mb-2 text-center text-white ">
             Answer Sheet -{" "}
-            <span className="text-2xl text-sky-300 font-semibold underline">
+            <span className="text-2xl text-green-400 font-semibold underline">
               Score: {score}/5
             </span>
+            {(score === 0 || score === 1 || score === 2) && (
+              <div className="ml-20 mt-2 text-red-500 text-3xl flex items-center">
+                <FaRegSadCry className="mr-2" />
+                Better luck next time!
+              </div>
+            )}
+            {(score === 4 || score === 5) && (
+              <div className="ml-20 mt-2 text-green-400 text-3xl flex items-center">
+                <FaRegSmileWink className="mr-2" />
+                Great job!
+              </div>
+            )}
           </h3>
           <div className="mb-4" style={{ margin: "20px" }}>
             {questionSets[currentSet - 1].map((q, index) => (
               <div key={q.id} className="mb-2 ml-10 mr-10">
                 <div
-                  className={`bg-gradient-to-b from-gray-300 to-gray-200 shadow-lg shadow-white rounded-lg p-4 ${
+                  className={`bg-transparent shadow-lg shadow-sky-200 rounded-lg p-4 ${
                     selectedOptions[q.id] === q.correctOption
                       ? "border-green-500 border-2"
                       : "border-red-500 border-2"
                   }`}
                 >
-                  <p className="mb-1 text-blue-800 font-medium">
+                  <p className="mb-1 text-sky-200 font-medium">
                     Question: {`${index + 1}. ${q.question}`}
                   </p>
                   <p
                     className={`mb-1 font-semibold ${
                       selectedOptions[q.id] === q.correctOption
-                        ? "text-green-600"
+                        ? "text-green-400"
                         : "text-red-500"
                     }`}
                   >
                     Your Answer: {getOptionText(q, selectedOptions[q.id])}
                   </p>
-                  <p className="font-semibold">
+                  <p className="font-semibold text-white">
                     Correct Answer: {getOptionText(q, q.correctOption)}
                   </p>
                 </div>

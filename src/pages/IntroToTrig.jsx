@@ -69,7 +69,7 @@ function SineWaveAnimation() {
       ref={canvasRef}
       width={800}
       height={400}
-      className="border border-gray-400"
+      className="border border-gray-400 mx-auto"
     />
   );
 }
@@ -84,13 +84,13 @@ export default function IntroToTrig() {
   ];
 
   return (
-    <div className="bg-black min-h-screen w-full p-6">
-      <div className="container mx-auto bg-black p-6 rounded-lg shadow-xl shadow-slate-100">
-        <h1 className="text-3xl text-white font-bold text-center mb-8">
+    <div className="bg-gradient-to-b from-blue-950 to-black min-h-screen w-full p-6">
+      <div className="container mx-auto bg-bg-gradient-to-b from-blue-950 to-black p-6 rounded-lg shadow-xl shadow-sky-200">
+        <h1 className="text-3xl text-sky-200 font-bold text-center mb-8">
           Introduction to Trigonometry
         </h1>
         <div className="p-6  mb-8">
-          <h2 className="text-2xl text-green-400 font-semibold mb-4">
+          <h2 className="text-2xl text-green-400 font-semibold mb-4 text-center">
             Why Right Triangles?
           </h2>
           <p className="text-lg text-white mb-4">
@@ -108,8 +108,9 @@ export default function IntroToTrig() {
               style={{ maxWidth: "30%", height: "auto" }}
             />
           </div>
+          <br />
 
-          <h2 className="text-2xl text-green-400 font-semibold mb-4">
+          <h2 className="text-2xl text-green-400 font-semibold mb-4 text-center">
             The Basic Trigonometric Functions
           </h2>
           <p className="text-lg text-white mb-4">
@@ -142,7 +143,7 @@ export default function IntroToTrig() {
             </li>
           </ul>
 
-          <h2 className="text-2xl text-green-400 font-semibold mb-4">
+          <h2 className="text-2xl text-center text-green-400 font-semibold mb-4">
             The Reciprocal Trigonometric Functions
           </h2>
           <p className="text-lg text-white mb-4">
@@ -177,7 +178,7 @@ export default function IntroToTrig() {
 
         <div className="p-6 text-center">
           <h2 className="text-2xl text-green-400 font-semibold mb-4">
-            Sine Wave Animation
+            Sine Wave
           </h2>
           <p className="text-lg text-white mb-4">
             Below is an animation showing how sine waves are created from the
@@ -187,7 +188,7 @@ export default function IntroToTrig() {
         </div>
 
         <div className="p-6 text-center mt-8">
-          <h2 className="text-2xl text-green-400 font-semibold mb-4">
+          <h2 className="text-3xl text-green-400 font-semibold mb-4">
             Trigonometric Values Table
           </h2>
           <table className="min-w-full bg-gray-900 text-white border border-gray-700">
@@ -212,7 +213,7 @@ export default function IntroToTrig() {
           </table>
         </div>
         <div className=" p-6 mb-8">
-          <h2 className="text-2xl text-green-400 font-semibold mb-4">
+          <h2 className="text-3xl text-green-400 font-semibold mb-4 text-center">
             Trigonometric Calculator
           </h2>
           <TrigonometricCalculator />

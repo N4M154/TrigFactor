@@ -87,12 +87,12 @@ const Graph = () => {
   };
 
   return (
-    <div className="bg-black min-h-screen w-full">
+    <div className="bg-gradient-to-b from-blue-950 to-black min-h-screen w-full">
       <div className="container mx-auto p-6">
-        <h1 className="text-3xl font-bold text-white text-center mb-8">
+        <h1 className="text-3xl font-bold text-sky-200 text-center mb-8">
           Trigonometric Functions
         </h1>
-        <div className=" bg-orange-50 p-6 rounded-lg shadow-lg shadow-slate-200">
+        <div className=" bg-gradient-to-b from-sky-100 to-gray-400 p-6 rounded-lg shadow-lg shadow-slate-200">
           <div className="mb-4">
             <label
               htmlFor="function-select"
@@ -102,7 +102,7 @@ const Graph = () => {
             </label>
             <select
               id="function-select"
-              className="p-2 border border-gray-300 rounded"
+              className="p-2 border border-black rounded bg-sky-50 text-black text-xl"
               value={selectedFunction}
               onChange={(e) => setSelectedFunction(e.target.value)}
             >
@@ -129,7 +129,7 @@ const Graph = () => {
               max="360"
               value={angle}
               onChange={(e) => setAngle(parseFloat(e.target.value))}
-              className="p-2 border border-gray-300 rounded w-full"
+              className="p-2 border border-black bg-sky-50 text-black text-xl rounded w-full"
             />
           </div>
           <Line data={functions[selectedFunction]} />

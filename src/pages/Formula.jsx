@@ -209,10 +209,10 @@ export default function Formula() {
   };
 
   return (
-    <div className="bg-black min-h-screen w-full">
-      <div className="container mx-auto p-6 rounded-lg shadow-xl shadow-slate-100">
-        <h1 className="text-3xl font-bold text-center mb-8 text-white">
-          Trigonometry Formulae
+    <div className="bg-gradient-to-b from-blue-950 to-black min-h-screen w-full">
+      <div className="container mx-auto p-6 rounded-lg shadow-xl shadow-sky-200">
+        <h1 className="text-3xl font-bold text-center mb-8 text-sky-200">
+          Trigonometric Formulae
         </h1>
         <div className="mb-4">
           <label
@@ -223,7 +223,7 @@ export default function Formula() {
           </label>
           <select
             id="category-select"
-            className="p-2 border border-gray-300 rounded"
+            className="p-2 border border-blue-950 rounded"
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
           >
@@ -236,7 +236,7 @@ export default function Formula() {
         </div>
         <button
           onClick={handleDownload}
-          className="bg-blue-500 text-white px-4 py-2 rounded-md mb-6"
+          className="bg-blue-500 text-white font-semibold px-4 py-2 rounded-md mb-6"
         >
           Download PDF
         </button>
@@ -247,7 +247,7 @@ export default function Formula() {
           {formulaeData[selectedCategory].map((item, index) => (
             <div
               key={index}
-              className="bg-sky-200 p-6 rounded-lg shadow-xl shadow-gray-200"
+              className="bg-sky-200 p-6 rounded-lg shadow-lg shadow-gray-300"
             >
               <h2 className="text-2xl font-semibold mb-4">{item.name}</h2>
               <p className="text-xl font-mono mb-2">{item.formula}</p>
