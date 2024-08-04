@@ -5,15 +5,15 @@ export default function Stuff() {
   const pdfRef = useRef();
 
   return (
-    <div className="bg-black min-h-screen w-full">
+    <div className="bg-gradient-to-b from-blue-950 via-gray-300 to-rose-300 min-h-screen w-full">
       <div className="container mx-auto p-6">
-        <h1 className="text-3xl text-white font-bold text-center mb-8">
+        <h1 className="text-3xl text-rose-500 font-bold text-center mb-8">
           Trigonometry: The Story of Triangles and Tunes
         </h1>
         <div
           ref={pdfRef}
           id="pdfContent"
-          className="p-6 rounded-lg shadow-xl shadow-stone-100 bg-transparent"
+          className="p-6 rounded-lg shadow-xl shadow-rose-700 bg-transparent"
         >
           <p className="text-lg mb-4 text-green-400 font-semibold">
             Imagine a time, long before calculators and fancy math apps—ancient
@@ -23,7 +23,7 @@ export default function Stuff() {
           <h1 className="text-2xl text-white font-bold mb-8">
             1. The Ancient Greeks: The Birth of Trigonometry
           </h1>
-          <p className="text-lg mb-4 text-white">
+          <p className="text-lg mb-4 font-medium">
             Picture yourself in ancient Greece. Mathematicians like Hipparchus
             are getting all excited about triangles. They’re not just any
             triangles, though—they’re right triangles. Hipparchus is the OG of
@@ -43,7 +43,7 @@ export default function Stuff() {
           <h1 className="text-2xl text-white font-bold mb-8">
             2. The Hindu and Islamic Golden Age: Trigonometry Gets a Glow-Up
           </h1>
-          <p className="text-lg mb-4 text-white">
+          <p className="text-lg mb-4 font-medium">
             Fast forward a bit to the medieval period. In India and the Islamic
             world, trigonometry is getting a serious upgrade. Indian
             mathematicians like Aryabhata and Bhaskara II are busy refining the
@@ -56,7 +56,7 @@ export default function Stuff() {
           <h1 className="text-2xl text-white font-bold mb-8">
             3. The Renaissance: Trigonometry’s Glamour Shot
           </h1>
-          <p className="text-lg mb-4 text-white">
+          <p className="text-lg mb-4 font-medium">
             As the Renaissance dawns, trigonometry is getting its glamour shot.
             European mathematicians like Johannes Kepler and Tycho Brahe are
             using it to make astronomical observations. Kepler, in particular,
@@ -75,7 +75,7 @@ export default function Stuff() {
           <h1 className="text-2xl text-white font-bold mb-8">
             4. The Modern Era: Trigonometry Goes Mainstream
           </h1>
-          <p className="text-lg mb-4 text-white">
+          <p className="text-lg mb-4 font-medium">
             In the 18th and 19th centuries, trigonometry gets a modern makeover.
             People like Leonhard Euler are diving deep into its applications,
             turning it into a full-blown mathematical superstar. Whether it’s
@@ -85,7 +85,7 @@ export default function Stuff() {
           <h1 className="text-2xl text-white font-bold mb-8">
             5. Today: Trigonometry in Everyday Life
           </h1>
-          <p className="text-lg mb-4 text-white">
+          <p className="text-lg mb-4 font-medium">
             Now, trigonometry is like the best-kept secret of the universe. It’s
             behind everything from GPS systems to video games, helping us
             understand everything from waves to building design. It’s the unsung
@@ -93,7 +93,7 @@ export default function Stuff() {
           </p>
           <br />
 
-          <p className="text-lg mb-4 text-teal-400">
+          <p className="text-lg mb-4 text-teal-900 font-bold">
             So next time you see a triangle, remember: it’s not just a
             shape—it’s got a whole epic history behind it!
           </p>
@@ -101,7 +101,7 @@ export default function Stuff() {
           <h1 className="text-2xl text-white font-bold mb-4">
             Fun Facts About Trigonometry
           </h1>
-          <ul className="text-lg text-white list-disc list-inside zigzag-list">
+          <ul className="text-lg font-medium list-disc list-inside zigzag-list">
             <li className="mb-2">
               The word "trigonometry" comes from the Greek words "trigonon"
               (triangle) and "metron" (measure).

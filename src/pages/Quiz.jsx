@@ -330,19 +330,19 @@ export default function Quiz() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center bg-gradient-to-br from-sky-100 to-white-500 min-h-screen">
-      <h1 className="text-3xl font-bold mb-8 text-sky-800">
+    <div className="flex flex-col items-center justify-center bg-gradient-to-b from-blue-950 to-black min-h-screen">
+      <h1 className="text-3xl font-bold mb-8 text-sky-200">
         Quiz on Trigonometry
       </h1>
       {!submitted && !timeExpired && (
-        <div className="fixed top-4 right-4 bg-white shadow-lg p-4 rounded-md border border-gray-300">
-          <div className="text-red-500 text-lg font-semibold">
+        <div className="fixed top-4 right-4 bg-blue-950 p-4 rounded-md border border-black shadow-md shadow-sky-300">
+          <div className="text-white text-lg font-semibold">
             Time left: {`${Math.floor(timeLeft / 60)}:${timeLeft % 60}`}
           </div>
         </div>
       )}
       {!submitted && !timeExpired && (
-        <p className="font-semibold rounded-md keyword-box border border-gray-300 p-4 bg-gray-300 mx-9">
+        <p className="font-semibold text-white rounded-md keyword-box border border-gray-300 p-4 bg-transparent mx-9">
           There are 5 questions on Trigonometry. You{" "}
           <span className="underline">
             must answer all the questions in a set before submitting.
@@ -367,8 +367,8 @@ export default function Quiz() {
           <div className="h-full">
             {questionSets[currentSet - 1].map((q, index) => (
               <div key={q.id} className="mb-4">
-                <div className="bg-white shadow-md rounded-lg p-4">
-                  <p className="mb-2 font-semibold">{`${index + 1}. ${
+                <div className="bg-gradient-to-b from-gray-400 to-gray-300 shadow-md shadow-white rounded-xl p-4">
+                  <p className="mb-2 font-semibold ">{`${index + 1}. ${
                     q.question
                   }`}</p>
                   <ul>
@@ -391,10 +391,10 @@ export default function Quiz() {
                 </div>
               </div>
             ))}
-            <div className="flex justify-between w-full mt-4">
+            <div className="flex justify-center w-full mt-4">
               <button
                 onClick={() => handleSubmit(false)}
-                className="bg-blue-500 text-white px-4 py-2 rounded"
+                className="bg-blue-700 text-black font-semibold px-4 py-2 rounded"
                 disabled={submitted}
               >
                 Submit
@@ -410,17 +410,17 @@ export default function Quiz() {
       ) : null}
       {submitted && !timeExpired && (
         <div className="mt-4 w-full h-full overflow-y-auto">
-          <h3 className="text-xl font-bold mb-2">
+          <h3 className="text-2xl font-bold mb-2 text-center text-white ">
             Answer Sheet -{" "}
-            <span className="text-green-500 font-semibold underline">
+            <span className="text-2xl text-sky-300 font-semibold underline">
               Score: {score}/5
             </span>
           </h3>
           <div className="mb-4" style={{ margin: "20px" }}>
             {questionSets[currentSet - 1].map((q, index) => (
-              <div key={q.id} className="mb-2">
+              <div key={q.id} className="mb-2 ml-10 mr-10">
                 <div
-                  className={`bg-white shadow-md rounded-lg p-4 ${
+                  className={`bg-gradient-to-b from-gray-300 to-gray-200 shadow-lg shadow-white rounded-lg p-4 ${
                     selectedOptions[q.id] === q.correctOption
                       ? "border-green-500 border-2"
                       : "border-red-500 border-2"
@@ -430,15 +430,17 @@ export default function Quiz() {
                     Question: {`${index + 1}. ${q.question}`}
                   </p>
                   <p
-                    className={`mb-1 ${
+                    className={`mb-1 font-semibold ${
                       selectedOptions[q.id] === q.correctOption
-                        ? "text-green-500"
+                        ? "text-green-600"
                         : "text-red-500"
                     }`}
                   >
                     Your Answer: {getOptionText(q, selectedOptions[q.id])}
                   </p>
-                  <p>Correct Answer: {getOptionText(q, q.correctOption)}</p>
+                  <p className="font-semibold">
+                    Correct Answer: {getOptionText(q, q.correctOption)}
+                  </p>
                 </div>
               </div>
             ))}
@@ -449,7 +451,7 @@ export default function Quiz() {
               onClick={() => {
                 resetQuiz();
               }}
-              className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
+              className="bg-blue-700 text-black font-semibold px-4 py-2 rounded mt-4"
             >
               Take Quiz Again
             </button>

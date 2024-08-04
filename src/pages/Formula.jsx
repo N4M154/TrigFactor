@@ -209,46 +209,51 @@ export default function Formula() {
   };
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-8">
-        Trigonometry Formulae
-      </h1>
-      <div className="mb-4">
-        <label
-          htmlFor="category-select"
-          className="block text-lg font-semibold mb-2"
+    <div className="bg-black min-h-screen w-full">
+      <div className="container mx-auto p-6 rounded-lg shadow-xl shadow-slate-100">
+        <h1 className="text-3xl font-bold text-center mb-8 text-white">
+          Trigonometry Formulae
+        </h1>
+        <div className="mb-4">
+          <label
+            htmlFor="category-select"
+            className="block text-lg text-white font-semibold mb-2"
+          >
+            Select Category
+          </label>
+          <select
+            id="category-select"
+            className="p-2 border border-gray-300 rounded"
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+          >
+            {Object.keys(formulaeData).map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </select>
+        </div>
+        <button
+          onClick={handleDownload}
+          className="bg-blue-500 text-white px-4 py-2 rounded-md mb-6"
         >
-          Select Category
-        </label>
-        <select
-          id="category-select"
-          className="p-2 border border-gray-300 rounded"
-          value={selectedCategory}
-          onChange={(e) => setSelectedCategory(e.target.value)}
+          Download PDF
+        </button>
+        <div
+          ref={pdfRef}
+          className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
         >
-          {Object.keys(formulaeData).map((category) => (
-            <option key={category} value={category}>
-              {category}
-            </option>
+          {formulaeData[selectedCategory].map((item, index) => (
+            <div
+              key={index}
+              className="bg-sky-200 p-6 rounded-lg shadow-xl shadow-gray-200"
+            >
+              <h2 className="text-2xl font-semibold mb-4">{item.name}</h2>
+              <p className="text-xl font-mono mb-2">{item.formula}</p>
+            </div>
           ))}
-        </select>
-      </div>
-      <button
-        onClick={handleDownload}
-        className="bg-blue-500 text-white px-4 py-2 rounded-md mb-6"
-      >
-        Download PDF
-      </button>
-      <div
-        ref={pdfRef}
-        className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-      >
-        {formulaeData[selectedCategory].map((item, index) => (
-          <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-lg">
-            <h2 className="text-2xl font-semibold mb-4">{item.name}</h2>
-            <p className="text-xl font-mono mb-2">{item.formula}</p>
-          </div>
-        ))}
+        </div>
       </div>
     </div>
   );

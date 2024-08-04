@@ -87,51 +87,53 @@ const Graph = () => {
   };
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-8">
-        Trigonometric Functions
-      </h1>
-      <div className="bg-white p-6 rounded-lg shadow-lg">
-        <div className="mb-4">
-          <label
-            htmlFor="function-select"
-            className="block text-lg font-semibold mb-2"
-          >
-            Select Function
-          </label>
-          <select
-            id="function-select"
-            className="p-2 border border-gray-300 rounded"
-            value={selectedFunction}
-            onChange={(e) => setSelectedFunction(e.target.value)}
-          >
-            <option value="sine">Sine (sin)</option>
-            <option value="cosine">Cosine (cos)</option>
-            <option value="tangent">Tangent (tan)</option>
-            <option value="secant">Secant (sec)</option>
-            <option value="cosecant">Cosecant (cosec)</option>
-            <option value="cotangent">Cotangent (cot)</option>
-          </select>
+    <div className="bg-black min-h-screen w-full">
+      <div className="container mx-auto p-6">
+        <h1 className="text-3xl font-bold text-white text-center mb-8">
+          Trigonometric Functions
+        </h1>
+        <div className=" bg-orange-50 p-6 rounded-lg shadow-lg shadow-slate-200">
+          <div className="mb-4">
+            <label
+              htmlFor="function-select"
+              className="block text-lg  font-semibold mb-2"
+            >
+              Select Function
+            </label>
+            <select
+              id="function-select"
+              className="p-2 border border-gray-300 rounded"
+              value={selectedFunction}
+              onChange={(e) => setSelectedFunction(e.target.value)}
+            >
+              <option value="sine">Sine (sin)</option>
+              <option value="cosine">Cosine (cos)</option>
+              <option value="tangent">Tangent (tan)</option>
+              <option value="secant">Secant (sec)</option>
+              <option value="cosecant">Cosecant (cosec)</option>
+              <option value="cotangent">Cotangent (cot)</option>
+            </select>
+          </div>
+          <div className="mb-4">
+            <label
+              htmlFor="angle-input"
+              className="block text-lg font-semibold mb-2"
+            >
+              Angle (in degrees)
+            </label>
+            <input
+              id="angle-input"
+              type="number"
+              step="1"
+              min="-360"
+              max="360"
+              value={angle}
+              onChange={(e) => setAngle(parseFloat(e.target.value))}
+              className="p-2 border border-gray-300 rounded w-full"
+            />
+          </div>
+          <Line data={functions[selectedFunction]} />
         </div>
-        <div className="mb-4">
-          <label
-            htmlFor="angle-input"
-            className="block text-lg font-semibold mb-2"
-          >
-            Angle (in degrees)
-          </label>
-          <input
-            id="angle-input"
-            type="number"
-            step="1"
-            min="-360"
-            max="360"
-            value={angle}
-            onChange={(e) => setAngle(parseFloat(e.target.value))}
-            className="p-2 border border-gray-300 rounded w-full"
-          />
-        </div>
-        <Line data={functions[selectedFunction]} />
       </div>
     </div>
   );

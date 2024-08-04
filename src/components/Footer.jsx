@@ -3,13 +3,13 @@ import React from "react";
 export default function Footer() {
   return (
     <footer className="w-full p-4 bg-black border-t-2 border-black shadow md:flex md:items-center md:justify-between md:p-6 ">
-      <span className="text-sm text-black sm:text-center dark:text-gray-100 font-semibold">
-        © 2024 PhysixLab. All Rights Reserved.
+      <span className="text-sm text-sky-200 sm:text-center  font-semibold">
+        © 2024 TrigFactor. All Rights Reserved.
       </span>
-      <div className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+      <div className="flex flex-wrap items-center mt-3 text-sm font-medium text-sky-200 sm:mt-0">
         <li className="mr-4 flex item-center">
           <a
-            href="https://github.com/N4M154/hackCSB.git"
+            href="https://github.com/N4M154/TrigFactor.git"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center hover:underline"
@@ -28,11 +28,11 @@ export default function Footer() {
             </svg>
             GitHub
           </a>
-          <div className="border-r pr-4 mr-4"></div>
+          <div className="border-r pr-4 mr-4 "></div>
         </li>
         <div className="mr-4 flex items-center">
           <div className="pr-4 mr-4">
-            <p className="font-semibold">Contact Us:</p>
+            <p className="font-semibold">Contact Me:</p>
           </div>
           <div className="flex items-center">
             <a

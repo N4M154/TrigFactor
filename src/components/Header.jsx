@@ -9,6 +9,7 @@ export default function Header() {
   };
 
   const chapters = [
+    { name: "Home", link: "/" },
     { name: "Chapter 1: History", link: "/stuff" },
     { name: "Chapter 2: Introduction to Trigonometry", link: "/intro" },
     { name: "Chapter 3: Graph", link: "/graph" },
@@ -18,7 +19,7 @@ export default function Header() {
 
   return (
     <div>
-      <div className="bg-black">
+      <div className="bg-blue-950 ">
         <div className="flex justify-between items-center max-w-6xl mx-auto p-4">
           <div className="flex items-center">
             <button onClick={toggleSidebar} className="text-white mr-10">
@@ -58,7 +59,7 @@ export default function Header() {
         </div>
       )}
 
-      <div className="bg-black">&nbsp;</div>
+      <div className="bg-blue-950">&nbsp;</div>
     </div>
   );
 }
