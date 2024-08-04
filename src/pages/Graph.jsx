@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -134,6 +135,13 @@ const Graph = () => {
           </div>
           <Line data={functions[selectedFunction]} />
         </div>
+      </div>
+      <div className="mt-4 flex justify-center p-2 space-x-4">
+        <Link to="/formula">
+          <button className="bg-white text-black font-semibold px-4 py-2 rounded-md">
+            NEXT
+          </button>
+        </Link>
       </div>
     </div>
   );

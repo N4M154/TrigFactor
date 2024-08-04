@@ -1,4 +1,7 @@
 import React, { useEffect, useRef } from "react";
+import { downloadPDF } from "../utils/pdf";
+import { Link } from "react-router-dom";
+
 import TrigonometricCalculator from "../components/Calculator";
 
 function SineWaveAnimation() {
@@ -75,6 +78,7 @@ function SineWaveAnimation() {
 }
 
 export default function IntroToTrig() {
+  const pdfRef = useRef();
   const angleValues = [
     { angle: "0°", sin: "0", cos: "1", tan: "0" },
     { angle: "30°", sin: "1/2", cos: "√3/2", tan: "1/√3" },
@@ -85,7 +89,11 @@ export default function IntroToTrig() {
 
   return (
     <div className="bg-gradient-to-b from-blue-950 to-black min-h-screen w-full p-6">
-      <div className="container mx-auto bg-bg-gradient-to-b from-blue-950 to-black p-6 rounded-lg shadow-xl shadow-sky-200">
+      <div
+        ref={pdfRef}
+        id="pdfContent"
+        className="container mx-auto bg-bg-gradient-to-b from-blue-950 to-black p-6 rounded-lg shadow-xl shadow-sky-200"
+      >
         <h1 className="text-3xl text-sky-200 font-bold text-center mb-8">
           Introduction to Trigonometry
         </h1>
@@ -218,6 +226,19 @@ export default function IntroToTrig() {
           </h2>
           <TrigonometricCalculator />
         </div>
+      </div>
+      <div className="mt-4 flex justify-center p-2 space-x-4">
+        <button
+          className="bg-sky-800 text-white px-4 py-2 rounded-md"
+          onClick={() => downloadPDF(pdfRef.current, "Introduction.pdf")}
+        >
+          Download PDF
+        </button>
+        <Link to="/graph">
+          <button className="bg-white text-black font-semibold px-4 py-2 rounded-md">
+            NEXT
+          </button>
+        </Link>
       </div>
     </div>
   );

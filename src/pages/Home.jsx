@@ -1,9 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import backgroundImage from "../images/701721.jpg";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div
+      className="min-h-screen bg-cover bg-center text-white"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+      }}
+    >
       <main className="container mx-auto p-6">
         {/* Hero Section */}
         <section className="text-center my-12">

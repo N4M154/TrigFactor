@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="w-full p-4 bg-black border-t-2 border-black shadow md:flex md:items-center md:justify-between md:p-6 ">
+    <footer className="w-full p-4 bg-black border-t-2 border-black md:flex md:items-center md:justify-between md:p-6 ">
       <span className="text-sm text-sky-200 sm:text-center  font-semibold">
         © 2024 TrigFactor. All Rights Reserved.
       </span>

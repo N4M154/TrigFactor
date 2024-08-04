@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { downloadPDF } from "../utils/pdf";
-
+import { Link } from "react-router-dom";
 export default function Stuff() {
   const pdfRef = useRef();
 
@@ -146,6 +146,11 @@ export default function Stuff() {
         >
           Download PDF
         </button>
+        <Link to="/intro">
+          <button className="bg-white text-black font-semibold px-4 py-2 rounded-md">
+            NEXT
+          </button>
+        </Link>
       </div>
       <style jsx>{`
         .zigzag-list li:nth-child(even) {

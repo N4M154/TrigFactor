@@ -38,9 +38,9 @@ export default function Header() {
         </div>
       </div>
       {sidebarOpen && (
-        <div className="fixed inset-y-0 left-0 w-64 bg-gray-700 text-white p-4 z-10">
+        <div className="fixed inset-y-0 left-0 w-64 bg-black shadow-lg shadow-sky-200  text-white p-4 z-10">
           <button onClick={toggleSidebar} className="mb-4">
-            &#10005; {/* This represents a close icon */}
+            &#10005; {/*close icon*/}
           </button>
           <h3 className="text-lg font-bold mb-4">Chapters</h3>
           <ul>

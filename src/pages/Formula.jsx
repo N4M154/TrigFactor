@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { downloadPDF } from "../utils/pdf";
+import { Link } from "react-router-dom";
 
 const formulaeData = {
   Periodicity: [
@@ -254,6 +255,13 @@ export default function Formula() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="mt-4 flex justify-center p-2 space-x-4">
+        <Link to="/quiz">
+          <button className="bg-white text-black font-semibold px-4 py-2 rounded-md">
+            Take a quiz!
+          </button>
+        </Link>
       </div>
     </div>
   );
