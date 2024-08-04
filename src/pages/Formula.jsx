@@ -84,19 +84,30 @@ const formulaeData = {
     },
     {
       name: "tan(x-y)",
-      formula: "tan(x-y) = (tanx – tany)/(1 + (tanx.tany))",
+      formula: "tan(x-y) = (tan(x) – tan(y))/(1 + (tan(x).tan(y)))",
     },
   ],
   "Double Angle": [
+    {
+      name: "sin(2x)",
+      formula: "sin(2x) = 2sin(x)cos(x)",
+    },
     {
       name: "cos(2x)",
       formula: "cos(2x) = 2cos²(x) – 1",
     },
     {
-      name: "sin(2x)",
-      formula: "sin(2x) = 2sin(x)cos(x)",
+      name: "tan(2x)",
+      formula: "tan(2x) = 2tan(x)/(1 - tan²(x))",
     },
-    // Add more double angle identities here
+    {
+      name: "sec(2x)",
+      formula: "sec(2x) = sec²(x)/(2 - sec²(x))",
+    },
+    {
+      name: "cosec(2x)",
+      formula: "cosec(2x) = (sec(x).cosec(x)) / 2",
+    },
   ],
   "Triple Angle": [
     {
@@ -107,16 +118,23 @@ const formulaeData = {
       name: "cos(3x)",
       formula: "cos(3x) = 4cos³(x) – 3cos(x)",
     },
-    // Add more triple angle identities here
+    {
+      name: "tan(3x)",
+      formula: "tan(3x) = (3tan(x) - tan³(x))/(1 - 3tan²(x))",
+    },
   ],
   "Half Angle": [
     {
-      name: "sin²(x/2)",
-      formula: "sin²(x/2) = (1 – cos(x)) / 2",
+      name: "sin(x/2)",
+      formula: "sin(x/2) = ± √((1 – cos(x)) / 2)",
     },
     {
-      name: "cos²(x/2)",
-      formula: "cos²(x/2) = (1 + cos(x)) / 2",
+      name: "cos(x/2)",
+      formula: "cos(x/2) = ± √((1 + cos(x)) / 2)",
+    },
+    {
+      name: "tan(x/2)",
+      formula: "tan(x/2) = ± √((1 - cos(x)) / (1 + cos(x)))",
     },
   ],
   "Product to Sum": [
