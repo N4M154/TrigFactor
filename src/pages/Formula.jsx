@@ -227,12 +227,9 @@ export default function Formula() {
       </div>
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {formulaeData[selectedCategory].map((item, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+          <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold mb-4">{item.name}</h2>
             <p className="text-xl font-mono mb-2">{item.formula}</p>
-            <p className="text-gray-700">
-              {item.explanation || "No explanation available"}
-            </p>
           </div>
         ))}
       </div>

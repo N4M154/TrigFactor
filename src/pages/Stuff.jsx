@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Stuff() {
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 ">
       <h1 className="text-3xl font-bold text-center mb-8">
         The History of Trigonometry
       </h1>
-      <div className="bg-white p-6 rounded-lg shadow-lg">
+      <div className="p-6 rounded-lg shadow-lg">
         <p className="text-lg mb-4">
           Trigonometry, the branch of mathematics that studies relationships
           involving lengths and angles of triangles, has a rich and fascinating
