@@ -13,6 +13,7 @@ export default function Header() {
     { name: "Chapter 2: Graph", link: "/graph" },
     { name: "Chapter 3: Formulae", link: "/formula" },
     { name: "Chapter 4: Quiz", link: "/quiz" },
+    { name: "Chapter 5: Introduction to Trigonometry", link: "/intro" },
   ];
 
   return (

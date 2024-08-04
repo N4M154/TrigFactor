@@ -6,6 +6,7 @@ import Graph from "./pages/Graph";
 import Layout from "./components/Layout";
 import Formula from "./pages/Formula";
 import Quiz from "./pages/Quiz";
+import IntroToTrig from "./pages/IntroToTrig";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/graph" element={<Graph />} />
           <Route path="/formula" element={<Formula />} />
           <Route path="/quiz" element={<Quiz />} />
+          <Route path="/intro" element={<IntroToTrig />} />
         </Route>
       </Routes>
     </BrowserRouter>

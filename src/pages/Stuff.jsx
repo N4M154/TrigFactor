@@ -149,10 +149,10 @@ export default function Stuff() {
       </div>
       <style jsx>{`
         .zigzag-list li:nth-child(even) {
-          margin-left: 20px; /* Adjust the value as needed for the zigzag effect */
+          margin-left: 20px;
         }
         .zigzag-list li:nth-child(odd) {
-          margin-left: 0px; /* Adjust the value as needed for the zigzag effect */
+          margin-left: 0px;
         }
       `}</style>
     </div>
