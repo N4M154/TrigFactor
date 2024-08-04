@@ -85,11 +85,11 @@ export default function IntroToTrig() {
 
   return (
     <div className="bg-black min-h-screen w-full p-6">
-      <div className="container mx-auto">
+      <div className="container mx-auto bg-black p-6 rounded-lg shadow-xl shadow-slate-100">
         <h1 className="text-3xl text-white font-bold text-center mb-8">
           Introduction to Trigonometry
         </h1>
-        <div className="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+        <div className="p-6  mb-8">
           <h2 className="text-2xl text-green-400 font-semibold mb-4">
             Why Right Triangles?
           </h2>
@@ -175,7 +175,7 @@ export default function IntroToTrig() {
           </ul>
         </div>
 
-        <div className="bg-gray-800 p-6 rounded-lg shadow-xl text-center">
+        <div className="p-6 text-center">
           <h2 className="text-2xl text-green-400 font-semibold mb-4">
             Sine Wave Animation
           </h2>
@@ -186,7 +186,7 @@ export default function IntroToTrig() {
           <SineWaveAnimation />
         </div>
 
-        <div className="bg-gray-800 p-6 rounded-lg shadow-xl text-center mt-8">
+        <div className="p-6 text-center mt-8">
           <h2 className="text-2xl text-green-400 font-semibold mb-4">
             Trigonometric Values Table
           </h2>
@@ -211,7 +211,7 @@ export default function IntroToTrig() {
             </tbody>
           </table>
         </div>
-        <div className="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+        <div className=" p-6 mb-8">
           <h2 className="text-2xl text-green-400 font-semibold mb-4">
             Trigonometric Calculator
           </h2>
