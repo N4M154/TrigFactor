@@ -10,10 +10,10 @@ export default function Header() {
 
   const chapters = [
     { name: "Chapter 1: History", link: "/stuff" },
-    { name: "Chapter 2: Graph", link: "/graph" },
-    { name: "Chapter 3: Formulae", link: "/formula" },
-    { name: "Chapter 4: Quiz", link: "/quiz" },
-    { name: "Chapter 5: Introduction to Trigonometry", link: "/intro" },
+    { name: "Chapter 2: Introduction to Trigonometry", link: "/intro" },
+    { name: "Chapter 3: Graph", link: "/graph" },
+    { name: "Chapter 4: Formulae", link: "/formula" },
+    { name: "Chapter 5: Quiz", link: "/quiz" },
   ];
 
   return (

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import TrigonometricCalculator from "../components/Calculator";
 
 function SineWaveAnimation() {
   const canvasRef = useRef(null);
@@ -74,6 +75,14 @@ function SineWaveAnimation() {
 }
 
 export default function IntroToTrig() {
+  const angleValues = [
+    { angle: "0°", sin: "0", cos: "1", tan: "0" },
+    { angle: "30°", sin: "1/2", cos: "√3/2", tan: "1/√3" },
+    { angle: "45°", sin: "√2/2", cos: "√2/2", tan: "1" },
+    { angle: "60°", sin: "√3/2", cos: "1/2", tan: "√3" },
+    { angle: "90°", sin: "1", cos: "0", tan: "undefined" },
+  ];
+
   return (
     <div className="bg-black min-h-screen w-full p-6">
       <div className="container mx-auto">
@@ -175,6 +184,38 @@ export default function IntroToTrig() {
             angles in a circle:
           </p>
           <SineWaveAnimation />
+        </div>
+
+        <div className="bg-gray-800 p-6 rounded-lg shadow-xl text-center mt-8">
+          <h2 className="text-2xl text-green-400 font-semibold mb-4">
+            Trigonometric Values Table
+          </h2>
+          <table className="min-w-full bg-gray-900 text-white border border-gray-700">
+            <thead>
+              <tr>
+                <th className="py-2 px-4 border-b">Angle</th>
+                <th className="py-2 px-4 border-b">sin(θ)</th>
+                <th className="py-2 px-4 border-b">cos(θ)</th>
+                <th className="py-2 px-4 border-b">tan(θ)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {angleValues.map((item, index) => (
+                <tr key={index}>
+                  <td className="py-2 px-4 border-b">{item.angle}</td>
+                  <td className="py-2 px-4 border-b">{item.sin}</td>
+                  <td className="py-2 px-4 border-b">{item.cos}</td>
+                  <td className="py-2 px-4 border-b">{item.tan}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="bg-gray-800 p-6 rounded-lg shadow-xl mb-8">
+          <h2 className="text-2xl text-green-400 font-semibold mb-4">
+            Trigonometric Calculator
+          </h2>
+          <TrigonometricCalculator />
         </div>
       </div>
     </div>
