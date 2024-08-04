@@ -61,7 +61,7 @@ export default function Stuff() {
           </p>
         </div>
       </div>
-      <div className="mt-4 flex space-x-4">
+      <div className="mt-4 flex justify-center p-2 space-x-4">
         <button
           className="bg-sky-800 text-white px-4 py-2 rounded-md"
           onClick={() =>
