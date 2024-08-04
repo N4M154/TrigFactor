@@ -5,6 +5,7 @@ import Stuff from "./pages/Stuff";
 import Graph from "./pages/Graph";
 import Layout from "./components/Layout";
 import Formula from "./pages/Formula";
+import Quiz from "./pages/Quiz";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/stuff" element={<Stuff />} />
           <Route path="/graph" element={<Graph />} />
           <Route path="/formula" element={<Formula />} />
+          <Route path="/quiz" element={<Quiz />} />
         </Route>
       </Routes>
     </BrowserRouter>

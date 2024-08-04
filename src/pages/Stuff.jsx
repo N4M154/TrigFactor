@@ -12,7 +12,7 @@ export default function Stuff() {
         </h1>
         <div
           ref={pdfRef}
-          id="pdfContent" // Ensure this ID is used in the downloadPDF function
+          id="pdfContent"
           className="p-6 rounded-lg shadow-xl bg-transparent"
         >
           <p className="text-lg mb-4">

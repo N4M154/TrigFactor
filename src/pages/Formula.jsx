@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { downloadPDF } from "../utils/pdf";
 
 const formulaeData = {
   Periodicity: [
@@ -28,7 +29,7 @@ const formulaeData = {
     },
     {
       name: "sin(π + A)",
-      formula: "sin(π _ A) = - sin A",
+      formula: "sin(π + A) = - sin A",
     },
     {
       name: "cos (π + A) ",
@@ -198,7 +199,14 @@ const formulaeData = {
 };
 
 export default function Formula() {
+  const pdfRef = useRef();
   const [selectedCategory, setSelectedCategory] = useState("Periodicity");
+
+  const handleDownload = () => {
+    if (pdfRef.current) {
+      downloadPDF(pdfRef.current, "trigonometry-formulae.pdf");
+    }
+  };
 
   return (
     <div className="container mx-auto p-6">
@@ -225,7 +233,16 @@ export default function Formula() {
           ))}
         </select>
       </div>
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <button
+        onClick={handleDownload}
+        className="bg-blue-500 text-white px-4 py-2 rounded-md mb-6"
+      >
+        Download PDF
+      </button>
+      <div
+        ref={pdfRef}
+        className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      >
         {formulaeData[selectedCategory].map((item, index) => (
           <div key={index} className="bg-gray-100 p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-semibold mb-4">{item.name}</h2>
