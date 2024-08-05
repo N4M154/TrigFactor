@@ -1,8 +1,34 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { downloadPDF } from "../utils/pdf";
 import { Link } from "react-router-dom";
+
 export default function Stuff() {
   const pdfRef = useRef();
+
+  useEffect(() => {
+    if (location.pathname === "/stuff") {
+      const scriptConfig = document.createElement("script");
+      scriptConfig.innerHTML = `
+      window.embeddedChatbotConfig = {
+        chatbotId: "Ujgay-ax1xPvnCAad5Y2_",
+        domain: "www.chatbase.co"
+      };
+    `;
+      document.body.appendChild(scriptConfig);
+
+      const scriptEmbed = document.createElement("script");
+      scriptEmbed.src = "https://www.chatbase.co/embed.min.js";
+      scriptEmbed.setAttribute("chatbotId", "Ujgay-ax1xPvnCAad5Y2_");
+      scriptEmbed.setAttribute("domain", "www.chatbase.co");
+      scriptEmbed.defer = true;
+      document.body.appendChild(scriptEmbed);
+
+      return () => {
+        document.body.removeChild(scriptConfig);
+        document.body.removeChild(scriptEmbed);
+      };
+    }
+  }, [location.pathname]);
 
   return (
     <div className="bg-gradient-to-b from-blue-950 to-black min-h-screen w-full">

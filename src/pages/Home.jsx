@@ -13,17 +13,15 @@ export default function Home() {
       <main className="container mx-auto p-6">
         {/* Hero Section */}
         <section className="text-center my-12">
-          <h2 className="text-3xl font-bold mb-4">
-            Welcome to Trigonometry Learning!
-          </h2>
-          <p className="text-lg mb-8">
-            Your one-stop destination for learning and mastering trigonometry.
+          <h2 className="text-5xl font-bold mb-4 text-sky-200">TrigFactor!</h2>
+          <p className="text-xl text-green-400 mb-8 font-mono overflow-hidden border-r-2 border-green-400 whitespace-nowrap animate-typewriter animate-blink">
             Explore concepts, interactive graphs, and formulae to enhance your
-            understanding.
+            understanding of the world of Trigonometry.
           </p>
+
           <Link
             to="/stuff"
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition duration-300"
+            className="inline-block bg-green-700 text-white font-semibold px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition duration-300"
           >
             Start Learning
           </Link>
@@ -31,28 +29,30 @@ export default function Home() {
 
         {/* Features Section */}
         <section className="my-12">
-          <h2 className="text-3xl font-bold text-center mb-8">
+          <h2 className="text-3xl font-bold text-center mb-8 text-green-200">
             What You Will Learn
           </h2>
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">Basic Concepts</h3>
+            <div className="bg-gradient-to-b from-green-400 to-black p-6 rounded-lg shadow-lg shadow-blue-500">
+              <h3 className="text-2xl font-semibold mb-4 text-center">
+                Introduction
+              </h3>
               <p>
                 Understand the foundational concepts of trigonometry including
                 angles, triangles, and the unit circle.
               </p>
             </div>
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">
+            <div className="bg-gradient-to-b from-black to-blue-500 p-6 rounded-lg shadow-lg shadow-green-400">
+              <h3 className="text-2xl font-semibold mb-4 text-center">
                 Trigonometric Functions
               </h3>
               <p>
                 Learn about sine, cosine, tangent, and other trigonometric
-                functions and how to use them.
+                functions and their formulae.
               </p>
             </div>
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">
+            <div className="bg-gradient-to-b from-green-400 to-black p-6 rounded-lg shadow-lg shadow-blue-500">
+              <h3 className="text-2xl font-semibold mb-4 text-center">
                 Interactive Graphs
               </h3>
               <p>
@@ -60,30 +60,26 @@ export default function Home() {
                 interactive graphing tools.
               </p>
             </div>
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">
-                Real-World Applications
+            <div className="bg-gradient-to-b from-black to-blue-500 p-6 rounded-lg shadow-lg shadow-green-400">
+              <h3 className="text-2xl font-semibold mb-4 text-center">
+                Chatbot
               </h3>
-              <p>
-                Discover how trigonometry is applied in various fields such as
-                physics, engineering, and architecture.
-              </p>
+              <p>Ask AI powered chatbot about your queries.</p>
             </div>
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">
-                Exercises and Quizzes
+            <div className="bg-gradient-to-b from-green-400 to-black p-6 rounded-lg shadow-lg shadow-blue-500">
+              <h3 className="text-2xl font-semibold mb-4 text-center">
+                Quizzes and timer
               </h3>
               <p>
-                Test your knowledge with interactive exercises and quizzes
+                Test your knowledge with interactive quizzes equipped with
                 designed to reinforce learning.
               </p>
             </div>
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold mb-4">Resources</h3>
-              <p>
-                Access additional resources including tutorials, videos, and
-                reference materials.
-              </p>
+            <div className="bg-gradient-to-b from-black to-blue-500 p-6 rounded-lg shadow-lg shadow-green-400">
+              <h3 className="text-2xl font-semibold mb-4 text-center">
+                Resources
+              </h3>
+              <p>Download PDFs for offline reading.</p>
             </div>
           </div>
         </section>

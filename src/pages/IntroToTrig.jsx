@@ -79,6 +79,30 @@ function SineWaveAnimation() {
 
 export default function IntroToTrig() {
   const pdfRef = useRef();
+  useEffect(() => {
+    if (location.pathname === "/intro") {
+      const scriptConfig = document.createElement("script");
+      scriptConfig.innerHTML = `
+      window.embeddedChatbotConfig = {
+        chatbotId: "Ujgay-ax1xPvnCAad5Y2_",
+        domain: "www.chatbase.co"
+      };
+    `;
+      document.body.appendChild(scriptConfig);
+
+      const scriptEmbed = document.createElement("script");
+      scriptEmbed.src = "https://www.chatbase.co/embed.min.js";
+      scriptEmbed.setAttribute("chatbotId", "Ujgay-ax1xPvnCAad5Y2_");
+      scriptEmbed.setAttribute("domain", "www.chatbase.co");
+      scriptEmbed.defer = true;
+      document.body.appendChild(scriptEmbed);
+
+      return () => {
+        document.body.removeChild(scriptConfig);
+        document.body.removeChild(scriptEmbed);
+      };
+    }
+  }, [location.pathname]);
   const angleValues = [
     { angle: "0°", sin: "0", cos: "1", tan: "0" },
     { angle: "30°", sin: "1/2", cos: "√3/2", tan: "1/√3" },
@@ -229,13 +253,13 @@ export default function IntroToTrig() {
       </div>
       <div className="mt-4 flex justify-center p-2 space-x-4">
         <button
-          className="bg-sky-800 text-white px-4 py-2 rounded-md"
+          className="bg-sky-800 text-white px-4 py-2 rounded-md "
           onClick={() => downloadPDF(pdfRef.current, "Introduction.pdf")}
         >
           Download PDF
         </button>
         <Link to="/graph">
-          <button className="bg-white text-black font-semibold px-4 py-2 rounded-md">
+          <button className="bg-white text-black font-semibold px-4 py-2 rounded-md ">
             NEXT
           </button>
         </Link>
