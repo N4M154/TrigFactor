@@ -5,7 +5,7 @@ Welcome to TrigFactor – a comprehensive and user-friendly online platform desi
 
 # Born curious about Trigonometry? Dive into our project!
 
-This is the entry for SOASH 2024 Hackathon.It was designed it with you in mind - anyone with even a spark of interest in the fascinating world of Trigonometry.
+It was designed it with you in mind - anyone with even a spark of interest in the fascinating world of Trigonometry.
 
 Get ready for a user-friendly and interactive experience that makes learning Trigonometry fun!
 
@@ -42,7 +42,7 @@ Get ready for a user-friendly and interactive experience that makes learning Tri
 
 # ✨Try it for yourself!
 
-Check out this link if you want to check out our project:
+Check out this link if you want to check out the project:
 
 TrigFactor : https://trigfactor.onrender.com
 
