@@ -28,14 +28,14 @@ Get ready for a user-friendly and interactive experience that makes learning Tri
     git clone https://github.com/N4M154/TrigFactor.git
     ```
 
-2. Install dependencies (in the client folder):
+2. Install dependencies (in the root):
     ```bash
     npm install
     ```
 
 ## Running the Application
 
-1. Start the program (in the client folder):
+1. Start the program (in the root):
     ```bash
     npm run dev
     ```
