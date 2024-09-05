@@ -1,6 +1,6 @@
 
 # TrigFactor
-(made for BOOST HACKS II)
+## made for Boost Hacks II
 Welcome to TrigFactor – a comprehensive and user-friendly online platform designed to empower users with access to the world of Trigonometry facts and quizzes. Whether you're a beginner or an advanced learner, TrigFactor facilitates seamless learning experiences for everyone.
 
 # Born curious about Trigonometry? Dive into our project!
